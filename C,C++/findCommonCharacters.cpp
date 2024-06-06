@@ -15,6 +15,8 @@ public:
             vector<int> freq(26, 0);
             for (char c : word)
             {
+                cout << c << endl
+                     << c - 'a' << endl;
                 freq[c - 'a']++;
             }
             for (int i = 0; i < 26; ++i)
