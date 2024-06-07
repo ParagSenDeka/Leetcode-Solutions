@@ -1,28 +1,35 @@
-#include<iostream>
-#include<vector>
-#include<set>
-#include<sstream>
+#include <iostream>
+#include <vector>
+#include <set>
+#include <sstream>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    string replaceWords(vector<string>& dict, string sentence) {
+    string replaceWords(vector<string> &dict, string sentence)
+    {
         set<string> s(begin(dict), end(dict));
         istringstream iss(sentence);
         vector<string> temp;
-        string word, res; 
+        string word, res;
 
-        while(iss >> word) temp.push_back(word);
-        for(string t : temp) {
+        while (iss >> word)
+            temp.push_back(word);
+        for (string t : temp)
+        {
             int i = 0;
-            while(i++ <= t.length()) {
+            while (i++ <= t.length())
+            {
                 string curr = t.substr(0, i);
-                if(s.find(curr) != s.end()) {
+                if (s.find(curr) != s.end())
+                {
                     res += curr + " ";
                     break;
                 }
-                
-                if(i == t.length()) res += curr + " ";
+
+                if (i == t.length())
+                    res += curr + " ";
             }
         }
 
@@ -31,9 +38,10 @@ public:
     }
 };
 
-int main(){
-    vector<string> dict={"cat","bat","rat"};
-    string sentence="the cattle was rattled by the battery";
+int main()
+{
+    vector<string> dict = {"cat", "bat", "rat"};
+    string sentence = "the cattle was rattled by the battery";
     Solution s;
-    cout<<s.replaceWords(dict,sentence);
+    cout << s.replaceWords(dict, sentence);
 }
