@@ -38,7 +38,7 @@ public:
 };
 
 int main(){
-    vector<int>position={1,3,4,5,6};
+    vector<int>position={4,3,2,1,10000};
     int m=2;
     Solution sol;
     cout<<sol.maxDistance(position,m);
