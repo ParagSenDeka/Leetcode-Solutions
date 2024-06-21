@@ -35,7 +35,7 @@ public:
             }
         }
         for (int i = idx; i < idx + k; i++) {
-            grumpy[i] = 0;
+            grumpy[i] = 0; 
         }
         for (int i = 0; i < n; i++) {
             if (grumpy[i] == 0) {
