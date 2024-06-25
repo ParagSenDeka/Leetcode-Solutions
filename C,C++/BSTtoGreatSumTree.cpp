@@ -40,15 +40,9 @@ void printInOrder(TreeNode* root) {
 
 int main() {
     // Creating the binary search tree
-    TreeNode* root = new TreeNode(4);
+    TreeNode* root = new TreeNode(2);
     root->left = new TreeNode(1);
-    root->right = new TreeNode(6);
-    root->left->left = new TreeNode(0);
-    root->left->right = new TreeNode(2);
-    root->left->right->right = new TreeNode(3);
-    root->right->left = new TreeNode(5);
-    root->right->right = new TreeNode(7);
-    root->right->right->right = new TreeNode(8);
+    root->right = new TreeNode(3);
 
     // Transform the BST to GST
     Solution solution;
