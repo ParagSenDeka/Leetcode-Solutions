@@ -15,10 +15,10 @@ class Solution {
 public:
     int sum = 0;
     void traverse(TreeNode* root) {
-        if (root) {
+        if(root){
             traverse(root->right);
-            sum += root->val;
-            root->val = sum;
+            sum+=root->val;
+            root->val=sum;
             traverse(root->left);
         }
     }
