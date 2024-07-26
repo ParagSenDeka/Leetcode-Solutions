@@ -7,11 +7,12 @@ using namespace std;
 class Solution {
 public:
     vector<int> sortJumbled(vector<int>& mapping, vector<int>& nums) {
-        auto translate_integer = [mapping](int num) -> int {
+        auto translate_integer = [mapping](int num){
             string digits = to_string(num);
             for (char digit : digits) {
                 digit = '0' + mapping[digit - '0'];
             }
+            cout<<digits;
             return stoi(digits);
         };
 
@@ -35,6 +36,7 @@ int main(){
     vector<int> nums={991,338,38};
     Solution sol;
     auto result=sol.sortJumbled(mapping,nums);
+    cout<<endl<<endl;
     for(auto i:result){
         cout<<i<<endl;
     }
