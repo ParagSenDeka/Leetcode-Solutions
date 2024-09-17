@@ -26,10 +26,6 @@ public:
             }
         }
 
-        if(result.empty()){
-                result.push_back("SAME SENTENCES");
-        }
-
         return result;
     }
 };
