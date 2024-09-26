@@ -34,14 +34,13 @@ public:
             {
                 k -= steps;
                 current++;
-            }
+             }
             else
             {
                 current *= 10;
                 k--;
             }
         }
-
         return current;
     }
 };
