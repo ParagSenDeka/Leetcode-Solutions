@@ -28,6 +28,6 @@ public:
 int main(){
     Solution sol;
     vector<int>nums={1,0,1,0,1};
-    int goal=2;
+    int goal=3;
     cout<<sol.numSubarraysWithSum(nums,goal);
 }
