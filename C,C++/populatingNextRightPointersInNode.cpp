@@ -54,5 +54,6 @@ int main(){
     root->left->right=new Node(5);
     root->right->left=new Node(6);
     root->right->right=new Node(7);
+    
     sol.connect(root);
 }
