@@ -23,8 +23,7 @@ public:
         if (count > nums.size() / 2) {
         return candidate;
     } else {
-        return -1; // Indicates no majority element
-    
+        return -1;
     }
     }
 };
