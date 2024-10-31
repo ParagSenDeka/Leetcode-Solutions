@@ -9,7 +9,7 @@ public:
     vector<int> findAnagrams(string s, string p)
     {
         vector<int> ans;
-        map<int, int> mp1, mp2;
+        map<char, int> mp1, mp2;
 
         for (auto x : p)
         {
