@@ -2,7 +2,6 @@
 #include <vector>
 using namespace std;
 
-
 class Solution
 {
 public:
@@ -42,8 +41,9 @@ public:
     }
 };
 
-int main(){
+int main()
+{
     Solution sol;
-    vector<int>height={0,1,0,2,1,0,1,3,2,1,2,1};
-    cout<<sol.trap(height);
+    vector<int> height = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+    cout << sol.trap(height);
 }
