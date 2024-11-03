@@ -18,14 +18,13 @@ public:
         }
 
         string suffix=s.substr(j);
-        cout<<suffix<<endl<<shortestPalindrome(s.substr(0,j))<<endl<<s.substr(j)<<endl;
         reverse(suffix.begin(),suffix.end());
         return suffix+shortestPalindrome(s.substr(0,j))+s.substr(j);
     }
 };
 
 int main(){
-    string s="abcda";
+    string s="abc";
     Solution sol;
     cout<<sol.shortestPalindrome(s);
 }
