@@ -60,4 +60,4 @@ int main()
     Solution sol;
     vector<vector<char>> grid = {{'1', '1', '1', '1', '0'}, {'1', '1', '0', '1', '0'}, {'1', '1', '0', '0', '0'}, {'0', '0', '0', '0', '0'}};
     cout << sol.numIslands(grid);
-}
+} 
