@@ -28,7 +28,7 @@ string checkFirstAndEnd(int start, int end)
         {
             if (a[start] == a[end])
             {
-                if(checkPalindrome(start, end))
+                if(checkPalindrome(start, end)){
                     if (end-start+1 > maximum.length()) {
                         // update the maximum with the longer palindrome
                         maximum=a.substr(start,end-start+1);
