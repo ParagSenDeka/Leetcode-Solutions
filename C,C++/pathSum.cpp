@@ -17,33 +17,23 @@ class Solution
 public:
     bool checkSum(TreeNode *root, int targetSum, int sum)
     {
-        sum += root->val;
-        if (sum == targetSum)
-        {
-            return true;
-        }
-        if (root->left == nullptr && root->right == nullptr && sum != targetSum)
-        {
+        if (root == nullptr)
             return false;
-        }
-        bool leftCheck = false, rightCheck = false;
-        if (root->left != nullptr)
+
+        sum += root->val;
+
+        if (root->left == nullptr && root->right == nullptr)
         {
-            leftCheck = checkSum(root->left, targetSum, sum);
+            return sum == targetSum;
         }
-        if (root->right != nullptr)
-        {
-            rightCheck = checkSum(root->right, targetSum, sum);
-        }
-        return leftCheck || rightCheck;
+
+        return checkSum(root->left, targetSum, sum) || checkSum(root->right, targetSum, sum);
     }
 
     bool hasPathSum(TreeNode *root, int targetSum)
     {
         if (root == nullptr)
-        {
             return false;
-        }
         return checkSum(root, targetSum, 0);
     }
 };
@@ -51,6 +41,6 @@ public:
 int main()
 {
     Solution sol;
-    TreeNode *root = new TreeNode(5, new TreeNode(4,new TreeNode(11,new TreeNode(7),new TreeNode(2)),nullptr),new TreeNode(8,new TreeNode(13),new TreeNode(4,nullptr,new TreeNode(1))));
+    TreeNode *root = new TreeNode(5, new TreeNode(4, new TreeNode(11, new TreeNode(7), new TreeNode(2)), nullptr), new TreeNode(8, new TreeNode(13), new TreeNode(4, nullptr, new TreeNode(1))));
     cout << sol.hasPathSum(root, 22);
 }
