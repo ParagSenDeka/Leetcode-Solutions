@@ -13,31 +13,42 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+
 class Solution
 {
 public:
+    void dfs(TreeNode *node, int level, vector<double> &sum, vector<int> &count)
+    {
+        if (!node)
+            return;
+        if (level == sum.size())
+        {
+            sum.push_back(node->val);
+            count.push_back(1);
+        }
+        else
+        {
+            sum[level] += node->val;
+            count[level]++;
+        }
+        dfs(node->left, level + 1, sum, count);
+        dfs(node->right, level + 1, sum, count);
+    }
+
     vector<double> averageOfLevels(TreeNode *root)
     {
-        vector<double> ans;
-        queue<TreeNode *> q;
-        q.push(root);
-        while (!q.empty())
+        if (!root)
+            return {};
+        vector<int> count;
+        vector<double> sum;
+        dfs(root, 0, sum, count);
+
+        vector<double> avg;
+        for (int i = 0; i < sum.size(); i++)
         {
-            int size = q.size();
-            double sum = 0;
-            for (int i = 0; i < size; i++)
-            {
-                auto curr = q.front();
-                q.pop();
-                sum += curr->val;
-                if (curr->left)
-                    q.push(curr->left);
-                if (curr->right)
-                    q.push(curr->right);
-            }
-            ans.push_back(sum / size);
+            avg.push_back(sum[i] / count[i]);
         }
-        return ans;
+        return avg;
     }
 };
 
