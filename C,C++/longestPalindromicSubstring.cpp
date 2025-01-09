@@ -25,10 +25,8 @@ public:
 
         for (int i = 0; i < s.length(); i++)
         {
-            // Try both odd and even length palindromes
-            int len1 = expand(i, i);     // Odd length
-            int len2 = expand(i, i + 1); // Even length
-
+            int len1 = expand(i, i); 
+            int len2 = expand(i, i + 1);
             int len = max(len1, len2);
             if (len > maxLen)
             {
