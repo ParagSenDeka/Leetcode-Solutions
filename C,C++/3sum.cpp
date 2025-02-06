@@ -1,6 +1,6 @@
-#include<iostream>
-#include<vector>
-#include<algorithm>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 class Solution
@@ -41,14 +41,17 @@ public:
     }
 };
 
-int main(){
+int main()
+{
     Solution sol;
-    vector<int>nums={-1,0,1,2,-1,-4};
-    auto result=sol.threeSum(nums);
-    for(auto i:result){
-        for(auto j:i){
-            cout<<j<<" ";
+    vector<int> nums = {-1, 0, 1, 2, -1, -4};
+    auto result = sol.threeSum(nums);
+    for (auto i : result)
+    {
+        for (auto j : i)
+        {
+            cout << j << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 }
