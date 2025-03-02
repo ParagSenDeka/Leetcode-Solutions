@@ -35,7 +35,7 @@ public:
                 int index = leftToRight ? i : curSize - 1 - i;
                 level[index] = cur->val;
                 if (cur->left)
-                    q.push(cur->left);
+                    q.push(cur->left);        
                 if (cur->right)
                     q.push(cur->right);
             }
