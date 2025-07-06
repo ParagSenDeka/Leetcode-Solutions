@@ -28,6 +28,5 @@ int main() {
         cout << nums[i] << " ";
     }
     cout << endl;
-
     return 0;
 }
