@@ -18,7 +18,7 @@ public:
         int total = 0, carry = 0;
         while (l1 || l2 || carry)
         {
-            total = carry;
+            total = carry; 
             if (l1)
             {
                 total += l1->val;
